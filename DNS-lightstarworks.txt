@@ -1,0 +1,19 @@
+# Point lightstarworks.com at GitHub Pages (TimHoshi/mapshop)
+# Add/replace in GoDaddy DNS. Leave all email records (MX, DKIM selector1/2, SPF, DMARC TXT) untouched.
+
+# APEX (lightstarworks.com) -> 4 A records
+A    @   185.199.108.153
+A    @   185.199.109.153
+A    @   185.199.110.153
+A    @   185.199.111.153
+
+# optional IPv6 (nice to have)
+AAAA @   2606:50c0:8000::153
+AAAA @   2606:50c0:8001::153
+AAAA @   2606:50c0:8002::153
+AAAA @   2606:50c0:8003::153
+
+# www -> CNAME
+CNAME  www   timhoshi.github.io
+
+# Then in repo Settings > Pages: custom domain = lightstarworks.com, enforce HTTPS (after DNS verifies).
