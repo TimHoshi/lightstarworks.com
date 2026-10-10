@@ -19,6 +19,12 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
+  .topnav{position:sticky;top:0;z-index:50;background:rgba(244,239,229,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:780px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+  .brand:hover{color:var(--crimson)}
+  .nav-links a{font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.08em;color:var(--muted);text-decoration:none;margin-left:18px}
+  .nav-links a:hover{color:var(--crimson)}
   body{
     background:
       radial-gradient(1100px 560px at 78% -8%, rgba(47,92,138,.07), transparent 62%),
@@ -137,11 +143,21 @@
   .sig{font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.1em;color:var(--cobalt);text-transform:uppercase}
 </style>
 </head>
-<body>
+<body id="top">
+<nav class="topnav">
+  <div class="nav-in">
+    <a class="brand" href="#top">Lightstar Works</a>
+    <div class="nav-links">
+      <a href="#top">Maps</a>
+      <a href="#figures">Figures</a>
+      <a href="mailto:orders@lightstarworks.com">Contact</a>
+    </div>
+  </div>
+</nav>
 <div class="wrap">
 
   <header>
-    <p class="kicker">Akari · Then and Now maps · <a href="#models" style="color:inherit;text-decoration:underline">models</a></p>
+    <p class="kicker">Akari · Then and Now maps</p>
     <h1>Ever wonder what was <em>here</em> before you?</h1>
     <p class="lede">Give me the place you love. I'll trace it through old maps, aerial photos and local records, and show you what it used to be.</p>
 
@@ -225,8 +241,8 @@
     </div>
   </section>
 
-  <section id="models">
-    <h2>Models · hold your iLander</h2>
+  <section id="figures">
+    <h2>Figures · hold your iLander</h2>
     <p class="big">A printed sculpture of your iLander. Static. Made to sit on a shelf and be held.</p>
     <p>From a clean front shot of each character, I sculpt the figure by eye. Not an export from a game file, a hand-built model, watertight and sized to fit a normal printer. Small runs, one at a time.</p>
     <figure class="model-sample">
